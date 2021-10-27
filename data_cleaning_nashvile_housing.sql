@@ -1,3 +1,8 @@
+--DATA CLEAINING - NASHVILLE HOUSING 
+
+------------------------------------------------------------------------------------------------------------------------
+
+
 -- Changing the SalesDate from TEXT to DATE
 
 ALTER TABLE nashville_housing
