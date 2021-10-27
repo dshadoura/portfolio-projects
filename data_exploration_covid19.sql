@@ -1,5 +1,6 @@
 --DAYA EXPLORATION - COVID-19
 
+------------------------------------------------------------------------------------------------------------------------
 
 --DATA BY COUNTRY
 
@@ -14,6 +15,8 @@ total_deaths,
 from "dshadoura/Portfolio".covid_deaths 
 order by 1, 2
 
+------------------------------------------------------------------------------------------------------------------------
+
 -- Looking at countries highest infection rate compared to population
 
 select location,
@@ -23,6 +26,8 @@ max((total_cases/population)*100) as percent_population_infected
 from "dshadoura/Portfolio"."covid_deaths"
 group by 1,2
 order by 4 desc nulls last
+
+------------------------------------------------------------------------------------------------------------------------
 
 -- Looking at countries with Highest Deaths Count per Population
 
@@ -53,7 +58,7 @@ select *,
 (people_vaccinated / population) * 100 as percentage_population_vaccinated
 from pop_vac 
 
-
+------------------------------------------------------------------------------------------------------------------------
 
 --DATA BY CONTINENT
 
@@ -66,6 +71,9 @@ where continent is null
 group by 1
 order by 2 desc nulls last 
 
+
+------------------------------------------------------------------------------------------------------------------------
+
 --- GLOBAL DATA
 
 select date,
@@ -77,7 +85,9 @@ where continent is not null
 group by 1
 order by 1 asc 
 
--- CREATE A VIEW TO STORE DATA FOR LATER VIZUALIZATIONS
+------------------------------------------------------------------------------------------------------------------------
+
+-- CREATING A VIEW TO STORE DATA FOR LATER VIZUALIZATIONS
 
 CREATE VIEW global_data as
 
